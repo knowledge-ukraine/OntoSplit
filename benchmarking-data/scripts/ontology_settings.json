@@ -1,0 +1,64 @@
+{
+	"jena_endpoint": "http://localhost:3030/",
+	"jena_user": "",
+	"jena_password": "",
+	"queries_repeating": 10,
+	"parallel": false,
+	"ontologies": [
+		[
+			"test_ont_single",
+			"test_ont_2_2"
+		],
+		[
+			"test_ont_3_1",
+			"test_ont_3_2",
+			"test_ont_3_3"
+		],
+		[
+			"test_ont_5_1",
+			"test_ont_5_2",
+			"test_ont_5_3",
+			"test_ont_5_4",
+			"test_ont_5_5"
+		],
+		[
+			"test_ont_7_1",
+			"test_ont_7_2",
+			"test_ont_7_3",
+			"test_ont_7_4",
+			"test_ont_7_5",
+			"test_ont_7_6",
+			"test_ont_7_7"
+		],
+		[
+			"test_ont_10_1",
+			"test_ont_10_2",
+			"test_ont_10_3",
+			"test_ont_10_4",
+			"test_ont_10_5",
+			"test_ont_10_6",
+			"test_ont_10_7",
+			"test_ont_10_8",
+			"test_ont_10_9",
+			"test_ont_10_10"
+		],
+		[
+			"test_ont_15_1",
+			"test_ont_15_2",
+			"test_ont_15_3",
+			"test_ont_15_4",
+			"test_ont_15_5",
+			"test_ont_15_6",
+			"test_ont_15_7",
+			"test_ont_15_8",
+			"test_ont_15_9",
+			"test_ont_15_10",
+			"test_ont_15_11",
+			"test_ont_15_12",
+			"test_ont_15_13",
+			"test_ont_15_14",
+			"test_ont_15_15"
+		]
+	]
+}
+	

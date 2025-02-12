@@ -1,0 +1,12 @@
+{
+	"input_files_dir": "input_files",
+	"output_dir": "parse_results",
+	"threads_n": 5,
+	"add_text_list": true,
+	"ensure_ascii": false,
+	"res dir": "owl/fragment_5",
+	"split to": 1,
+	"owl path": "Context Ontology",
+	"base file name": "ContextOntology_"
+	
+}

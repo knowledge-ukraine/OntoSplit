@@ -1,0 +1,286 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?scope ?code ?desctiption ?article_name
+WHERE {
+    ?w_1 rdfs:label "breast"@en.  
+    ?w_1 name:relate_to_context ?context. 
+  
+    ?w_1 rdf:type ?x.
+    ?x rdfs:subClassOf ?y.
+    ?y rdfs:label "words"@en.
+
+    ?w_n rdfs:label "cancer"@en.  
+    ?w_n name:relate_to_context ?context.    
+   
+    ?context rdfs:label ?scope.
+     {?context rdf:type name:cl_title.} UNION 
+  {?context rdf:type name:cl_synonyms.}
+
+    ?context name:relate_to_article ?article.
+    
+    ?icd_10_code rdfs:subClassOf name:cl_icd__10_codes.
+    ?icd_10_descr rdf:type ?icd_10_code.
+    ?icd_10_descr name:relate_to_article ?article.
+    ?icd_10_descr rdfs:comment ?desctiption.
+    ?icd_10_code rdfs:label ?code.
+   
+   OPTIONAL {
+    ?article rdfs:label ?article_name.
+  } 
+}
+
+__|__
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?scope ?set ?code ?desctiption ?article_name
+WHERE {
+    ?w_1 rdfs:label "aortic"@en.
+    ?w_1 name:relate_to_context ?context.
+
+    ?w_n rdfs:label "aneurysm"@en.  
+    ?w_n name:relate_to_context ?context. 
+  
+    ?w_1 rdf:type ?x.
+    ?w_n rdf:type ?x_n.
+    ?x rdfs:subClassOf ?y.
+    ?x_n rdfs:subClassOf ?y.
+    ?y rdfs:label "words"@en.
+
+    ?context rdfs:label ?scope.
+  {?context rdf:type name:cl_title.} UNION 
+  {?context rdf:type name:cl_synonyms.}   
+  
+    ?context name:relate_to_article ?article.
+    
+    ?g_descr name:relate_to_article ?article.
+    ?g_descr rdfs:comment ?desctiption.
+    ?g_descr rdf:type ?g_code.
+    ?g_code rdfs:label ?code.
+    ?g_code rdfs:subClassOf ?code_set.
+    ?code_set rdfs:label ?set.
+    ?code_set rdfs:subClassOf name:cl_g__codes.
+   
+   OPTIONAL {
+    ?article rdfs:label ?article_name.
+  } 
+}
+
+
+__|__
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?scope ?set ?code ?desctiption ?article_name
+WHERE {
+    ?w_1 rdfs:label "aortic"@en.
+    ?w_1 name:relate_to_context ?context.
+
+    ?w_n rdfs:label "aneurysm"@en.  
+    ?w_n name:relate_to_context ?context. 
+  
+    ?w_1 rdf:type ?x.
+    ?x rdfs:subClassOf ?y. 
+    ?w_n rdf:type ?x_n.
+    ?x_n rdfs:subClassOf ?y.
+  
+    ?y rdfs:label "words"@en.
+
+
+    ?context rdfs:label ?scope.
+  {?context rdf:type name:cl_title.} UNION 
+  {?context rdf:type name:cl_synonyms.}   
+  
+    ?context name:relate_to_article ?article.
+    
+    ?g_descr name:relate_to_article ?article.
+    ?g_descr rdfs:comment ?desctiption.
+    ?g_descr rdf:type ?g_code.
+    ?g_code rdfs:label ?code.
+    ?g_code rdfs:subClassOf ?code_set.
+    ?code_set rdfs:label ?set.
+    ?code_set rdfs:subClassOf name:cl_g__codes.
+   
+   OPTIONAL {
+    ?article rdfs:label ?article_name.
+  } 
+}
+
+__|__
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?code_type ?code_descr ?article_name ?scope ?y
+WHERE {
+    ?code_class rdfs:label "96002"@en.  
+    ?code_descr_class rdf:type ?code_class. 
+    ?code_class rdfs:subClassOf ?code_type_class.
+    ?code_type_class rdfs:label ?code_type.
+    ?code_descr_class rdfs:label ?code_descr.
+    ?code_descr_class name:relate_to_article ?article.
+    OPTIONAL {
+    	?article rdfs:label ?article_name.
+        
+  	} 
+    ?scope_ind name:relate_to_article ?article. 
+    ?scope_ind rdfs:comment ?scope.
+     {?scope_ind rdf:type name:cl_title.} UNION 
+  	{?scope_ind rdf:type name:cl_synonyms.} 
+  
+   ?article rdf:type ?x.
+   ?x rdfs:label ?y.
+}
+
+
+__|__
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?topic ?context_text ?article_name ?scope
+WHERE {
+    ?w_1 rdfs:label "breast"@en.  
+    ?w_1 name:relate_to_context ?context.
+  
+    ?w_2 rdfs:label "cancer"@en.  
+    ?w_2 name:relate_to_context ?context.
+  
+    ?w_1 rdf:type ?x.
+    ?x rdfs:subClassOf ?y.
+    ?y rdfs:label "words"@en.
+  	
+    ?context rdf:type ?context_class.
+      
+    ?context name:relate_to_article ?article.
+    ?article rdfs:label ?article_name.
+  
+    ?title name:relate_to_article ?article.
+    ?title rdf:type name:cl_title.
+    ?title rdfs:label ?scope.
+
+	OPTIONAL {
+    	?context_class rdfs:subClassOf ?chapter_cl.
+        ?chapter_cl rdfs:label ?chapter.
+    }
+  
+   ?out_context name:relate_to_article ?article. 
+   ?out_context rdf:type ?out_context_class.
+   ?out_context rdfs:comment ?context_text.
+   ?out_context_class rdfs:label ?topic.     
+
+    FILTER (?out_context_class = name:cl_presentation_signs_and_symptoms ||
+             ?out_context_class = name:cl_nature_of_symptoms ||
+             ?out_context_class = name:cl_rating_of_symptoms ||
+             ?out_context_class = name:cl_pattern_of_symptoms ||
+             ?out_context_class = name:cl_other_symptoms ). 
+}  ORDER BY ?scope ?topic
+
+__|__
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?topic ?context_text ?article_name ?scope
+WHERE {
+    ?w_1 rdfs:label "breast"@en.  
+    ?w_1 name:relate_to_context ?context.
+  
+    ?w_2 rdfs:label "cancer"@en.  
+    ?w_2 name:relate_to_context ?context.
+  
+    ?w_1 rdf:type ?x.
+    ?w_2 rdf:type ?x_2.
+    ?x rdfs:subClassOf ?y.
+    ?x_2 rdfs:subClassOf ?y.
+    ?y rdfs:label "words"@en.
+  	
+    ?context rdf:type ?context_class.
+      
+    ?context name:relate_to_article ?article.
+    ?article rdfs:label ?article_name.
+  
+    ?title name:relate_to_article ?article.
+    ?title rdf:type name:cl_title.
+    ?title rdfs:label ?scope.
+
+	OPTIONAL {
+    	?context_class rdfs:subClassOf ?chapter_cl.
+        ?chapter_cl rdfs:label ?chapter.
+    }
+  
+   ?out_context name:relate_to_article ?article. 
+   ?out_context rdf:type ?out_context_class.
+   ?out_context rdfs:comment ?context_text.
+   ?out_context_class rdfs:label ?topic.     
+
+    FILTER (?out_context_class = name:cl_presentation_signs_and_symptoms ||
+             ?out_context_class = name:cl_nature_of_symptoms ||
+             ?out_context_class = name:cl_rating_of_symptoms ||
+             ?out_context_class = name:cl_pattern_of_symptoms ||
+             ?out_context_class = name:cl_other_symptoms ). 
+}  ORDER BY ?scope ?topic
+
+__|__
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX name: <http://www.semanticweb.org/ContextOntology#>
+SELECT DISTINCT ?topic ?context_text ?article_name ?scope
+WHERE {
+    ?w_1 rdfs:label "back"@en.  
+    ?w_1 name:relate_to_context ?context.
+  
+    ?w_2 rdfs:label "pain"@en.  
+    ?w_2 name:relate_to_context ?context.
+  
+    ?w_1 rdf:type ?x.
+    ?w_2 rdf:type ?x_2.
+    ?x rdfs:subClassOf ?y.
+    ?x_2 rdfs:subClassOf ?y.
+    ?y rdfs:label "words"@en.
+  	
+    ?context rdf:type ?context_class.
+      
+    ?context name:relate_to_article ?article.
+    ?article rdfs:label ?article_name.
+  
+    ?title name:relate_to_article ?article.
+    ?title rdf:type name:cl_title.
+    ?title rdfs:label ?scope.
+
+	OPTIONAL {
+    	?context_class rdfs:subClassOf ?chapter_cl.
+        ?chapter_cl rdfs:label ?chapter.
+    }
+  
+   ?out_context name:relate_to_article ?article. 
+   ?out_context rdf:type ?out_context_class.
+   ?out_context rdfs:comment ?context_text.
+   ?out_context_class rdfs:label ?topic.     
+
+    FILTER (?out_context_class = name:cl_presentation_signs_and_symptoms ||
+             ?out_context_class = name:cl_nature_of_symptoms ||
+             ?out_context_class = name:cl_rating_of_symptoms ||
+             ?out_context_class = name:cl_pattern_of_symptoms ||
+             ?out_context_class = name:cl_other_symptoms ). 
+}  ORDER BY ?scope ?topic
+

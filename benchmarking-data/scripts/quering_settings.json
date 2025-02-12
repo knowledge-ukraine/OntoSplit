@@ -1,0 +1,10 @@
+{
+	"jena_endpoint": "http://localhost:3030/",
+	"jena_user": "",
+	"jena_password": "",
+	"queries_repeating": 1,
+	"queries_multiplication": 15,
+	"parallel": true,
+	"ontology": "test_ont_single"
+}
+	
