@@ -17,12 +17,6 @@ Public Address to Receive USDT (BEP20): 0x1128A7b84728123dd4F55176c378754Dd396A6
 
 Pay me via Trust Wallet: https://link.trustwallet.com/send?asset=c20000714_t0x55d398326f99059fF775485246999027B3197955&address=0x1128A7b84728123dd4F55176c378754Dd396A674
 
-
-
-### ⚠ Important note
-
-To clone this repo you need [Git LFS](https://docs.github.com/en/articles/installing-git-large-file-storage)
-
 ### 📂 Contents:
 
  - 📂 [./data](data) - stores all ontology (or RDF/XML structures) files (original and partitioned), as well as any sample datasets or additional resources needed for experimentation and demonstrations.
