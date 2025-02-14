@@ -38,7 +38,9 @@ Pay me via Trust Wallet: https://link.trustwallet.com/send?asset=c20000714_t0x55
  - Semantic Web & RDF processing
 
 ### 🚀 Future Work:
-The repository will be updated with further optimizations, including machine learning-based query performance prediction and dynamic ontology partitioning. Contributions and discussions are welcome!
+The repository will be updated with further optimizations, including machine learning-based query performance prediction and dynamic ontology partitioning.
+
+Contributions and discussions are welcome!
 
 ### 📖 How to Cite
 
