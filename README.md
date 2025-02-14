@@ -44,18 +44,19 @@ The repository will be updated with further optimizations, including machine lea
 
 If you use this repository in your research, please cite it as follows:
 
-🔹 APA citation format for article:
+🔹 APA citation format for articles:
 
-  Palagin, O.V., Petrenko, M.G., Kaverinskiy, V.V., & Malakhov, K.S. (2025). Method for Increasing the Efficiency of OWL/RDF-Structures Processing in Apache Jena Semantic Web Framework Environment. Cybernetics and Systems Analysis, __(_), __ - __. https://doi.org/
+ - Palagin, O.V., Petrenko, M.G., Kaverinskiy, V.V., & Malakhov, K.S. (2025). Method for Increasing the Efficiency of OWL/RDF-Structures Processing in Apache Jena Semantic Web Framework Environment. Cybernetics and Systems Analysis, __(_), __ - __. https://doi.org/
+ - Kaverinskiy, V.V., Petrenko, M.G., & Malakhov, K.S. (2025).
 
 🔹 BibTeX citation format for repository:
 ```
 @misc{OntoSplit,
-  author = {Kyrylo Malakhov and contributors},
+  author = {Kyrylo Malakhov and Vladislav Kaverinskiy},
   title = {OntoSplit: Ontology Partitioning and SPARQL Query Optimization},
   year = {2024},
   howpublished = {GitHub Repository},
-  url = {https://github.com/YOUR_USERNAME/OntoSplit-SPARQL-Optimization}
+  url = {https://github.com/knowledge-ukraine/OntoSplit}
 }
 ```
 
