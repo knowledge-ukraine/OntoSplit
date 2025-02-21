@@ -1,6 +1,18 @@
 # OntoSplit
 This repository contains the dataset, experimental scripts, and results for the study on ontology partitioning and SPARQL query optimization. The research focuses on improving the execution time of complex SPARQL queries by splitting large RDF/XML ontologies and leveraging parallel query execution in Apache Jena Fuseki.
 
+### 📂 Contents:
+
+ - 📂 [./data](data) - stores all ontology (or RDF/XML structures) files (original and partitioned), as well as any sample datasets or additional resources needed for experimentation and demonstrations.
+ - 📊 [./benchmarking-data](benchmarking-data) – experiments data
+ - 📊 [./benchmarking-data/benchmark.xlsx](benchmarking-data/benchmark.xlsx) – final tests results data: tables, charts
+ - 📜 [./benchmarking-data/sparql-queries](benchmarking-data/sparql-queries) – test SPARQL queries categorized by execution time (fast -1, medium -2, slow - 3)
+ - 📜 [./benchmarking-data/results-time](benchmarking-data/results-time) - contains **JSON files** capturing the execution time for SPARQL queries of different categories (fast -1, medium -2, slow - 3) across various ontology partition configurations (1–15 parts)
+ - 🔧 [./benchmarking-data/scripts](benchmarking-data/scripts) - Python scripts for benchmarking execution and results calculation
+ - 🔧 [./scripts/ontology-creation](scripts/ontology-creation) - Python scripts for ontology creation (PDF to JSON; JSON to XML/RDF ontology with different splitting options)
+ - 📕 [./parsed-pdfs-json](parsed-pdfs-json) - Stores files related to PDFs from the [Dataset](#-dataset), including **original PDFs** (optional) and **JSON outputs** resulting from parsing scripts
+ - 📖 ./docs/ – methodology, findings, and implementation details - TODO 
+
 ### 🚀 Sponsor this project
 
 Please support @malakhovks. Despite the Wartime in Ukraine, R&D in the field of Digital Health and Ontology Engineering are being resumed:
@@ -16,18 +28,6 @@ Public Address to Receive USDT (BEP20): 0x1128A7b84728123dd4F55176c378754Dd396A6
 </p>
 
 Pay me via Trust Wallet: https://link.trustwallet.com/send?asset=c20000714_t0x55d398326f99059fF775485246999027B3197955&address=0x1128A7b84728123dd4F55176c378754Dd396A674
-
-### 📂 Contents:
-
- - 📂 [./data](data) - stores all ontology (or RDF/XML structures) files (original and partitioned), as well as any sample datasets or additional resources needed for experimentation and demonstrations.
- - 📊 [./benchmarking-data](benchmarking-data) – experiments data
- - 📊 [./benchmarking-data/benchmark.xlsx](benchmarking-data/benchmark.xlsx) – final tests results data: tables, charts
- - 📜 [./benchmarking-data/sparql-queries](benchmarking-data/sparql-queries) – test SPARQL queries categorized by execution time (fast -1, medium -2, slow - 3)
- - 📜 [./benchmarking-data/results-time](benchmarking-data/results-time) - contains **JSON files** capturing the execution time for SPARQL queries of different categories (fast -1, medium -2, slow - 3) across various ontology partition configurations (1–15 parts)
- - 🔧 [./benchmarking-data/scripts](benchmarking-data/scripts) - Python scripts for benchmarking execution and results calculation
- - 🔧 [./scripts/ontology-creation](scripts/ontology-creation) - Python scripts for ontology creation (PDF to JSON; JSON to XML/RDF ontology with different splitting options)
- - 📕 [./parsed-pdfs-json](parsed-pdfs-json) - Stores files related to PDFs from the [Dataset](#-dataset), including **original PDFs** (optional) and **JSON outputs** resulting from parsing scripts
- - 📖 ./docs/ – methodology, findings, and implementation details - TODO 
 
 ### 🔍 Key Topics:
 
