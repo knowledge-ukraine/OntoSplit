@@ -62,7 +62,9 @@ wget -O ./ebsco-rehabilitation-dataset.zip https://cdn.e-rehab.pp.ua/u/ebsco-reh
 
 This study would not have been possible without the financial support of the [National Research Foundation of Ukraine](https://nrfu.org.ua/) (Open Funder Registry: 10.13039/100018227). Our work was funded by Grant contract:
 
-- [Development of the cloud-based platform for patient-centered telerehabilitation of oncology patients with mathematical-related modeling, application ID: 2021.01/0136](https://doi.org/10.5195/ijt.2024.6686).
+- [Development of the cloud-based platform for patient-centered telerehabilitation of oncology patients with mathematical-related modeling, application ID: 2021.01/0136](https://doi.org/10.5195/ijt.2024.6686)
+- [Link at the National Repository of Academic Texts №0225U001069](https://nrat.ukrintei.ua/searchdoc/0225U001069/)
+- [Link at the National Repository of Academic Texts №0224U000467](https://nrat.ukrintei.ua/searchdoc/0224U000467/)
 
 ### 📖 How to Cite / BibTex
 
