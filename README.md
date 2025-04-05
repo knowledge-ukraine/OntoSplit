@@ -42,26 +42,6 @@ The repository will be updated with further optimizations, including machine lea
 
 Contributions and discussions are welcome!
 
-### 📖 How to Cite
-
-If you use this repository in your research, please cite it as follows:
-
-🔹 APA citation format for articles:
-
- - Palagin, O.V., Petrenko, M.G., Kaverinskiy, V.V., & Malakhov, K.S. (2025). Method for Increasing the Efficiency of OWL/RDF-Structures Processing in Apache Jena Semantic Web Framework Environment. Cybernetics and Systems Analysis, __(_), __ - __. https://doi.org/
- - Kaverinskiy, V.V., Petrenko, M.G., & Malakhov, K.S. (2025).
-
-🔹 BibTeX citation format for repository:
-```
-@misc{OntoSplit,
-  author = {Kyrylo Malakhov and Vladislav Kaverinskiy},
-  title = {OntoSplit: Ontology Partitioning and SPARQL Query Optimization},
-  year = {2024},
-  howpublished = {GitHub Repository},
-  url = {https://github.com/knowledge-ukraine/OntoSplit}
-}
-```
-
 #### 📕 Dataset
 
 EBSCO articles dataset (domain knowledge: rehabilitation medicine) + JSON of every article
@@ -83,4 +63,34 @@ wget -O ./ebsco-rehabilitation-dataset.zip https://cdn.e-rehab.pp.ua/u/ebsco-reh
 This study would not have been possible without the financial support of the [National Research Foundation of Ukraine](https://nrfu.org.ua/) (Open Funder Registry: 10.13039/100018227). Our work was funded by Grant contract:
 
 - [Development of the cloud-based platform for patient-centered telerehabilitation of oncology patients with mathematical-related modeling, application ID: 2021.01/0136](https://doi.org/10.5195/ijt.2024.6686).
+
+### 📖 How to Cite / BibTex
+
+If you use this repository in your research, please cite it as follows:
+
+🔹 Citation format for article:
+
+```bibtex
+@article{palagin_2025_ontosplit,
+  title={A Method for Enhancing the Efficiency of RDF/XML-Structure Processing in the Apache Jena Semantic Web Framework},
+  author={Palagin, O. V. and Petrenko, M. G. and Kaverinskiy, V. V. and Malakhov, K.S.},
+  journal={Cybernetics and Systems Analysis},
+  volume={61},
+  number={3},
+  DOI={},
+  year={2025}
+}
+```
+
+🔹 Citation format for repository:
+
+```bibtex
+@misc{OntoSplit,
+  author = {Kyrylo Malakhov and Vladislav Kaverinskiy},
+  title = {OntoSplit: Ontology Partitioning and SPARQL Query Optimization},
+  year = {2025},
+  howpublished = {GitHub Repository},
+  url = {https://github.com/knowledge-ukraine/OntoSplit}
+}
+```
 
